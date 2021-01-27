@@ -68,12 +68,15 @@ class Owner
   def sell_pets
     pets = @cats + @dogs
     pets.each do |pet|
-      pet.mood = "nervous"
-      
-      binding.pry
+      pet.mood = "nervous" 
+      pet.owner = nil
     end
- 
+
+    @cats.clear
+    @dogs.clear  
   end
 
-  
+  def list_pets
+    "I have #{@dogs.count} dog(s), and #{@cats.count} cat(s)."
+  end
 end
