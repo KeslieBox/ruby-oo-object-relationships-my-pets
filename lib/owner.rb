@@ -69,8 +69,9 @@ class Owner
     pets = @cats + @dogs
     pets.each do |pet|
       pet.mood = "nervous"
-      
-      # binding.pry
+      pet.each do |x|
+      binding.pry
+      end
     end
  
   end
